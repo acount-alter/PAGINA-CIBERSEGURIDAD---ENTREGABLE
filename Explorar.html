@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIBERSEGURIDAD - GUÍA TÉCNICA</title>
+    <link rel="stylesheet" href="Estilo5.css">
+    <link rel="icon" href="IMAGENES/Calaveron.jpeg" type="image/x-icon">
+</head>
+<body>
+
+    <!-- LOADER-->
+    <div id="loader">
+        <div class="loader-content">
+            <center><img src="IMAGENES/calaverita.png" alt="Cargando..." class="loader-skull"></center>
+            <p><center>Cargando...</center></p>
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo"><strong>CIBERSEGURIDAD</strong></div>
+        <ul class="nav-links">
+            <li><a href="Principal.html">Inicio</a></li>
+            <li><a href="Etaques.html">Ataques</a></li>
+            <li><a href="Protección.html">Protección</a></li>
+            <li><a href="Registro.html"><button class="btn-sign">Acceder</button></a></li>
+        </ul>
+    </nav>
+
+    <main class="guia-container">
+        <header class="guia-header">
+            <h1>Guía Completa de Ciberseguridad</h1>
+            <p>Aprende las mejores prácticas para defender sistemas y redes de ataques digitales avanzados.</p>
+        </header>
+
+        <section class="toc-section">
+            <h2>Tabla de Contenidos</h2>
+            <div class="toc-grid">
+                <ul class="toc-column">
+                    <li>1. Fundamentos de Redes</li>
+                    <li>2. Técnicas de Defensa</li>
+                    <li>3. Gestión de Incidentes</li>
+                </ul>
+                <ul class="toc-column">
+                    <li>4. Ciberseguridad Industrial</li>
+                    <li>5. Protección de Datos</li>
+                    <li>6. Talleres de Seguridad</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="info-grid">
+            <article class="info-card">
+                <div class="placeholder-img">
+                    <img src="IMAGENES/pexels-tima-miroshnichenko-5380637.jpg" alt="Contraseñas">
+                </div>
+                <h3>Gestión de Contraseñas</h3>
+                <ul>
+                    <li>Uso de gestores robustos</li>
+                    <li>Autenticación de dos factores</li>
+                    <li>Políticas de rotación</li>
+                </ul>
+            </article>
+
+            <article class="info-card">
+                <div class="placeholder-img">
+                    <img src="IMAGENES/pexels-tima-miroshnichenko-5380637.jpg" alt="Nube">
+                </div>
+                <h3>Seguridad en la Nube</h3>
+                <ul>
+                    <li>Cifrado de contenedores</li>
+                    <li>Configuración de firewalls</li>
+                    <li>Monitoreo de accesos</li>
+                </ul>
+            </article>
+            
+            <!-- Más artículos según necesite -->
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p><strong>&copy; 2026 - GAMARRA MAZA ENTORNO CIBERSEGURIDAD</strong></p>
+    </footer>
+
+    <script>
+        window.addEventListener("load", () => {
+            const loader = document.getElementById("loader");
+            setTimeout(() => {
+                loader.classList.add("fade-out");
+            }, 1200); 
+        });
+    </script>
+</body>
+</html>

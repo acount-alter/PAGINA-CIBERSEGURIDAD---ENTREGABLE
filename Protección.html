@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIBERSEGURIDAD - ESTRATEGIAS DE PROTECCIÓN</title>
+    <link rel="stylesheet" href="Estilo4.css">
+    <link rel="icon" href="IMAGENES/Calaveron.jpeg" type="image/x-icon">
+</head>
+<body>
+
+    <div id="loader">
+        <div class="loader-content">
+            <center><img src="IMAGENES/calaverita.png" alt="Cargando..." class="loader-skull"></center>
+            <p><center>Cargando...</center></p>
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo"><strong>CIBERSEGURIDAD</strong></div>
+        <ul class="nav-links">
+            <li><a href="Principal.html">Inicio</a></li>
+            <li><a href="Etaques.html">Ataques</a></li>
+            <li><a href="Protección.html" class="active">Protección</a></li>
+            <li><a href="Registro.html"><button class="btn-sign">Acceder</button></a></li>
+        </ul>
+    </nav>
+
+    <header class="section-header">
+        <h1>Estrategias de Protección Integral</h1>
+        <p>Implementa las mejores prácticas para blindar sistemas y redes. <br> 
+           Fortalece tu infraestructura contra amenazas avanzadas y malware persistente.</p>
+    </header>
+
+    <main class="grid-container">
+        <!-- Estrategia 1 -->
+        <article class="card">
+            <div class="card-img-box">
+                <img src="IMAGENES/CIBER.jpg" alt="Firewall">
+            </div>
+            <div class="card-text">
+                <h3>Firewall de Próxima Generación</h3>
+                <ul>
+                    <li>Filtrado de paquetes a nivel de aplicación.</li>
+                    <li>Inspección profunda de tráfico cifrado.</li>
+                    <li>Prevención de intrusiones integrada (IPS).</li>
+                    <li>Control de acceso basado en identidad.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- Estrategia 2 -->
+        <article class="card">
+            <div class="card-img-box">
+                <img src="IMAGENES/NAV.jpg" alt="IDS">
+            </div>
+            <div class="card-text">
+                <h3>Detección de Intrusos (IDS)</h3>
+                <ul>
+                    <li>Análisis de firmas y patrones anómalos.</li>
+                    <li>Monitoreo de tráfico en tiempo real.</li>
+                    <li>Alertas tempranas ante escaneos de puertos.</li>
+                    <li>Registro detallado de incidentes sospechosos.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- Estrategia 3 -->
+        <article class="card">
+            <div class="card-img-box">
+                <img src="IMAGENES/7.jpg" alt="Gestión">
+            </div>
+            <div class="card-text">
+                <h3>Gestión de Vulnerabilidades</h3>
+                <ul>
+                    <li>Escaneo periódico de activos críticos.</li>
+                    <li>Priorización de parches de seguridad.</li>
+                    <li>Remediación de brechas en el software.</li>
+                    <li>Cumplimiento de estándares internacionales.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <section class="bottom-action">
+        <button class="btn-full">Ver Soluciones Completas</button>
+    </section>
+
+    <footer class="footer">
+        <p><strong>&copy; 2026 - GAMARRA MAZA ENTORNO CIBERSEGURIDAD</strong></p>
+    </footer>
+
+    <script>
+        window.addEventListener("load", () => {
+            const loader = document.getElementById("loader");
+            setTimeout(() => {
+                loader.classList.add("fade-out");
+            }, 1200);
+        });
+    </script>
+</body>
+</html>

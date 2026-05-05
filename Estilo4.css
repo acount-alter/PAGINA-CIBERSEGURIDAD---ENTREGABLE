@@ -1,0 +1,77 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+body {
+    background: #fdfdfd url('IMAGENES/imagen\ map.jpeg') no-repeat center top/cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* --- LOADER --- */
+#loader {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: #fff; display: flex; justify-content: center; align-items: center;
+    z-index: 9999; transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+.loader-skull { width: 100px; animation: pulse 1.5s infinite; }
+.loading-bar { width: 150px; height: 4px; background: #eee; margin: 15px auto; overflow: hidden; border-radius: 10px; position: relative; }
+.loading-bar::after { content: ""; position: absolute; width: 100%; height: 100%; background: #000000; animation: loading 2s infinite; }
+.fade-out { opacity: 0; visibility: hidden; }
+
+/* --- NAVEGACIÓN --- */
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background: #fff; border-bottom: 1px solid #eee; }
+.nav-links { display: flex; list-style: none; gap: 25px; }
+.nav-links a { text-decoration: none; color: #666; font-weight: 500; transition: 0.3s; }
+.nav-links a:hover { color: #df2525; }
+.active { color: #df2525 !important; border-bottom: 2px solid #000; padding-bottom: 5px; }
+.btn-sign { background: #000; color: #fff; border: none; padding: 10px 25px; border-radius: 25px; cursor: pointer; transition: 0.3s; }
+.btn-sign:hover { background: #333; transform: scale(1.05); }
+
+/* --- CONTENIDO --- */
+.section-header { text-align: center; padding: 60px 10%; animation: fadeInUp 0.8s ease-out; }
+.section-header h1 { font-size: 2.8rem; margin-bottom: 15px; }
+.section-header p { color: #666; line-height: 1.6; max-width: 800px; margin: 0 auto; }
+
+.grid-container {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; padding: 0 8% 50px;
+}
+
+.card {
+    background: #fff; border-radius: 15px; overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    animation: fadeInUp 1s ease-out; transition: 0.3s;
+}
+.card:hover { transform: translateY(-10px); box-shadow: 0 12px 30px rgba(0,0,0,0.15); }
+
+.card-img-box { width: 100%; height: 200px; overflow: hidden; }
+.card-img-box img { width: 100%; height: 100%; object-fit: cover; }
+
+.card-text { padding: 30px; }
+.card-text h3 { margin-bottom: 20px; font-size: 1.4rem; color: #1a1a1a; }
+.card-text ul li {
+    font-size: 0.95rem; color: #555; margin-bottom: 12px;
+    padding-left: 20px; position: relative; list-style: none;
+}
+.card-text ul li::before { content: "•"; color: #df2525; font-weight: bold; position: absolute; left: 0; }
+
+/* BOTÓN FINAL */
+.bottom-action { text-align: center; padding-bottom: 80px; }
+.btn-full {
+    background: #000; color: #fff; border: none; padding: 15px 45px; border-radius: 8px;
+    font-weight: bold; cursor: pointer; transition: 0.3s;
+}
+.btn-full:hover { background: #333; transform: scale(1.05); }
+
+/* FOOTER */
+.footer { padding: 30px; text-align: center; background: rgba(255,255,255,0.8); border-top: 1px solid #eee; }
+
+/* ANIMACIONES */
+@keyframes loading { from { left: -100%; } to { left: 100%; } }
+@keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; gap: 15px; }
+    .section-header h1 { font-size: 2rem; }
+}

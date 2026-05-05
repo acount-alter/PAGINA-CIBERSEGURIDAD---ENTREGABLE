@@ -1,0 +1,147 @@
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-image: url(IMAGENES/imagen\ map.jpeg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Responsivo */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #eee;
+}
+
+nav { display: flex; gap: 20px; align-items: center; }
+nav a { text-decoration: none; color: #333; font-weight: 500; font-size: 0.9rem; }
+
+.btn-acceder {
+    background: #000; color: #fff; border: none;
+    padding: 8px 20px; border-radius: 20px; cursor: pointer;
+}
+
+/* Contenedor y Card */
+.main-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-card {
+    background: #fff;
+    display: flex;
+    width: 100%;
+    max-width: 850px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Secciones de la Card */
+.login-form-side { flex: 1; padding: 40px; text-align: center; }
+.subscription-side { flex: 1; padding: 20px; background: #f0f0f0; }
+
+.image-placeholder {
+    width: 100%; height: 100%;
+    background: #c4c4c4; border-radius: 8px;
+    position: relative; overflow: hidden;
+}
+
+.image-placeholder img {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%; object-fit: cover;
+}
+
+/* Estilos de Formulario */
+h2 { margin-bottom: 5px; font-size: 1.8rem; }
+.subtitle { margin-bottom: 25px; font-weight: 600; color: #555; }
+.form-group { text-align: left; margin-bottom: 15px; }
+.form-group label { display: block; font-size: 0.8rem; margin-bottom: 5px; }
+.form-group input {
+    width: 100%; padding: 12px; background: #d9d9d9; border: none; border-radius: 5px;
+}
+.btn-submit {
+    width: 100%; padding: 12px; background: #000; color: #fff;
+    border: none; border-radius: 5px; font-weight: bold; cursor: pointer; margin-top: 10px;
+}
+.form-footer { margin-top: 15px; display: flex; flex-direction: column; gap: 8px; }
+.form-footer a { color: #000; font-size: 0.85rem; font-weight: 600; }
+
+/* --- ANIMACIONES LOGIN/REGISTRO --- */
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Efecto suave para las tarjetas */
+.login-card {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Efecto especial al hacer clic  */
+.form-group input:focus {
+    outline: none;
+    background-color: #e0e0e0;
+    border: 1px solid #000;
+    transition: all 0.3s ease;
+}
+
+/* El botón de Iniciar Sesión ahora brilla */
+.btn-submit {
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    letter-spacing: 1px; /* El texto se separa un poco, efecto muy pro */
+    background-color: #222;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Animación para el cuadro de la imagen */
+.image-placeholder img {
+    transition: transform 0.5s ease;
+}
+
+.image-placeholder:hover img {
+    transform: scale(1.1); /* La imagen de ransomware se acerca suavemente */
+}
+
+/*Estilo Responsivo*/
+@media (max-width: 768px) {
+    .header-content { flex-direction: column; gap: 15px; text-align: center; }
+    
+    .login-card {
+        flex-direction: column; /* Apila el formulario y la imagen */
+        max-width: 400px; /* Tamaño ideal para móviles */
+    }
+
+    .subscription-side {
+        order: -1; 
+        height: 200px; 
+    }
+
+    .login-form-side { padding: 30px 20px; }
+}
+
+@media (max-width: 380px) {
+    .login-card { width: 95%; }
+    h2 { font-size: 1.5rem; }
+    nav { gap: 10px; font-size: 0.8rem; }
+}
